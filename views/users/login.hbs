@@ -1,0 +1,19 @@
+<a href="/">Home</a>
+<h2>Log In </h2>
+<form action="/user/login" method="POST" >
+  {{#if errorMessage}}
+    <div class="alert alert-danger" role="alert">
+      {{errorMessage}}
+    </div>
+  {{/if}}
+  <div>
+    <input placeholder="Username" name="username"/>
+    <label for="floatingInput">Username</label>
+  </div><br>
+  <div>
+    <input type="password" placeholder="Password" name="password"/>
+    <label for="floatingPassword">Password</label>
+  </div><br>
+  <button type="submit">Login</button>
+  <a href="/user/signup">I don't have an account</a>
+</form>
